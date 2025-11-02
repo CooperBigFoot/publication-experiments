@@ -1,0 +1,89 @@
+# EA-LSTM Base Configuration Template
+# Entity-Aware LSTM for hydrological forecasting in forecast mode
+
+data:
+  base_path: ../path/to/your/data # TODO: Update with your data path
+  gauge_ids_file: configs/basin_ids_files/your_basins.txt # TODO: Update with your basin file
+  pipeline_path: ../path/to/your/data/ts_pipeline.joblib # TODO: Update with your pipeline path
+
+features:
+  forcing:
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow_was_filled
+    - streamflow
+
+  static:
+    - p_mean
+    - area
+    - ele_mt_sav
+    - high_prec_dur
+    - frac_snow
+    - high_prec_freq
+    - slp_dg_sav
+    - cly_pc_sav
+    - aridity_ERA5_LAND
+    - aridity_FAO_PM
+    - low_prec_dur
+    - gauge_lat
+    - snd_pc_sav
+    - pet_mean_ERA5_LAND
+    - gauge_lon
+    - slt_pc_sav
+    - low_prec_freq
+    - glc_cl_smj
+    - seasonality_ERA5_LAND
+    - cmi_ix_syr
+    - rdd_mk_sav
+    - for_pc_sse
+
+  future:
+    # All forcing features except streamflow (for forecast mode)
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow_was_filled
+
+  target: streamflow
+
+sequence:
+  input_length: 150 # TODO: Adjust based on your temporal resolution (e.g., 365 for daily)
+  output_length: 1 # TODO: Forecast horizon
+
+data_preparation:
+  mode: forecast # Predicts future streamflow from past + future forcing
+  is_autoregressive: true # Uses past streamflow as input
+  include_dates: true # Include timestamps for evaluation
+
+model:
+  type: ealstm
+  overrides:
+    # Scheduler configuration
+    scheduler: "cosine_annealing"
+    scheduler_kwargs:
+      T_max: 150 # Should match trainer.max_epochs
+      eta_min: 0.00001
+
+dataloader:
+  batch_size: 2048
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: false
+  shuffle_train: true

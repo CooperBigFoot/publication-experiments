@@ -1,0 +1,54 @@
+# TFT Hyperparameter Search Space
+# Temporal Fusion Transformer for interpretable multi-horizon forecasting
+
+# Core architecture
+hidden_size:
+  type: int
+  low: 32
+  high: 128
+  step: 16
+
+lstm_layers:
+  type: int
+  low: 1
+  high: 3
+
+encoder_layers:
+  type: int
+  low: 1
+  high: 3
+
+# Attention configuration
+num_attention_heads:
+  type: categorical
+  choices: [1, 2, 4, 8]
+
+# Hidden continuous size (for processing continuous variables)
+hidden_continuous_size:
+  type: int
+  low: 16
+  high: 128
+  step: 16
+
+# Regularization
+dropout:
+  type: float
+  low: 0.0
+  high: 0.5
+
+attn_dropout:
+  type: float
+  low: 0.0
+  high: 0.3
+
+# Model configuration
+add_relative_index:
+  type: categorical
+  choices: [true, false]
+
+# Learning rate
+learning_rate:
+  type: float
+  low: 0.000001
+  high: 0.001
+  log: true

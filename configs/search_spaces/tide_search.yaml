@@ -1,0 +1,59 @@
+# TiDE Hyperparameter Search Space
+# Time-series Dense Encoder for hydrological forecasting
+
+# Core architecture
+hidden_size:
+  type: int
+  low: 64
+  high: 256
+  step: 32
+
+num_encoder_layers:
+  type: int
+  low: 1
+  high: 4
+
+num_decoder_layers:
+  type: int
+  low: 1
+  high: 4
+
+# Decoder configuration
+decoder_output_size:
+  type: int
+  low: 8
+  high: 64
+  step: 8
+
+temporal_decoder_hidden_size:
+  type: int
+  low: 16
+  high: 128
+  step: 16
+
+# Feature projections (0 = no projection)
+past_feature_projection_size:
+  type: categorical
+  choices: [0, 16, 32, 64]
+
+future_forcing_projection_size:
+  type: categorical
+  choices: [0, 16, 32, 64]
+
+# Regularization
+dropout:
+  type: float
+  low: 0.0
+  high: 0.5
+
+# Normalization
+use_layer_norm:
+  type: categorical
+  choices: [true, false]
+
+# Learning rate
+learning_rate:
+  type: float
+  low: 0.000001
+  high: 0.001
+  log: true

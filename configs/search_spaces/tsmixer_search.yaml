@@ -1,0 +1,39 @@
+# TSMixer Hyperparameter Search Space
+# MLP-based time series mixing architecture
+
+# Core architecture
+hidden_size:
+  type: int
+  low: 32
+  high: 256
+  step: 32
+
+num_mixing_layers:
+  type: int
+  low: 2
+  high: 8
+
+# Static feature embedding
+static_embedding_size:
+  type: int
+  low: 4
+  high: 32
+  step: 4
+
+# Fusion configuration
+fusion_method:
+  type: categorical
+  choices: ["add", "concat"]
+
+# Regularization
+dropout:
+  type: float
+  low: 0.0
+  high: 0.5
+
+# Learning rate
+learning_rate:
+  type: float
+  low: 0.000001
+  high: 0.001
+  log: true

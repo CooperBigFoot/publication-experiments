@@ -1,0 +1,69 @@
+data:
+  base_path: ../path/to/eval/data
+  gauge_ids_file: configs/path/to/basin_ids_files/basin_stats.txt
+  pipeline_path: ../path/to/eval/data/ts_pipeline.joblib
+features:
+  forcing:
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow
+  static:
+    - p_mean
+    - area
+    - ele_mt_sav
+    - high_prec_dur
+    - frac_snow
+    - high_prec_freq
+    - slp_dg_sav
+    - cly_pc_sav
+    - aridity_ERA5_LAND
+    - aridity_FAO_PM
+    - low_prec_dur
+    - gauge_lat
+    - snd_pc_sav
+    - pet_mean_ERA5_LAND
+    - gauge_lon
+    - slt_pc_sav
+    - low_prec_freq
+    - glc_cl_smj
+    - seasonality_ERA5_LAND
+    - cmi_ix_syr
+    - rdd_mk_sav
+    - for_pc_sse
+  target: streamflow
+sequence:
+  input_length: 150
+  output_length: 1
+data_preparation:
+  mode: forecast
+  is_autoregressive: true
+  include_dates: true
+model:
+  type: ealstm
+  overrides:
+    loss_fn: "basin_nse"
+
+    loss_fn_kwargs:
+      basin_stats_file: "configs/basin_stats/basin_stats_eval.json"
+      epsilon: 1
+
+    scheduler: "cosine_annealing"
+
+    scheduler_kwargs:
+      T_max: 150
+      eta_min: 0.00001
+dataloader:
+  batch_size: 2048
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: false
+  shuffle_train: true

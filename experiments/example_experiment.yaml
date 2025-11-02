@@ -1,0 +1,10 @@
+models:
+  example: configs/models/example_model.yaml
+
+trainer:
+  mode: evaluation # Use train/val/test splits for model evaluation
+  max_epochs: 150
+  early_stopping_patience: 15
+  accumulate_grad_batches: 1 # Effective batch size: 2048 * 1 = 2048
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0

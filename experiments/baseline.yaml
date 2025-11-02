@@ -1,0 +1,17 @@
+# Baseline Experiment Configuration
+# Multi-model comparison for hydrological forecasting
+# Use with tl-tune to optimize hyperparameters for each model
+
+models:
+  ealstm: configs/models/ealstm_base.yaml
+  tide: configs/models/tide_base.yaml
+  tsmixer: configs/models/tsmixer_base.yaml
+  tft: configs/models/tft_base.yaml
+
+trainer:
+  mode: evaluation  # Use train/val/test splits for hyperparameter tuning
+  max_epochs: 150   # Maximum training epochs per trial
+  early_stopping_patience: 15  # Stop if no improvement after 15 epochs
+  accumulate_grad_batches: 1  # Effective batch size: batch_size * accumulate_grad_batches
+  check_val_every_n_epoch: 1  # Validate every epoch
+  gradient_clip_val: 1.0  # Clip gradients to prevent exploding gradients
