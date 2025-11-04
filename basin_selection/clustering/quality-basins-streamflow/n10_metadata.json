@@ -1,0 +1,7 @@
+{
+  "n_clusters": 10,
+  "inertia": 5.807849918838475,
+  "n_basins": 1047,
+  "timestamp": "2025-11-04T10:52:56.782285",
+  "input_data": "basin_selection/clustering/streamflow_52wk.npy"
+}
