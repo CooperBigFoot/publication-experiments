@@ -77,17 +77,17 @@ model:
   overrides:
     # Base hyperparameters (will be tuned by tl-tune)
     hidden_size: 64
-    num_mixing_layers: 5
-    static_embedding_size: 10
+    num_mixing_layers: 8
+    static_embedding_size: 20
 
     # Fusion configuration (will be tuned)
     fusion_method: "add"  # Options: "add" or "concat"
 
     # Regularization
-    dropout: 0.1
+    dropout: 0.2
 
     # Learning rate
-    learning_rate: 0.001
+    learning_rate: 0.0005
 
     # RevIN normalization
     use_rev_in: true

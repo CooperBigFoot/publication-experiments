@@ -76,19 +76,19 @@ model:
   type: tide
   overrides:
     # Base hyperparameters (will be tuned by tl-tune)
-    hidden_size: 128
-    num_encoder_layers: 2
-    num_decoder_layers: 2
-    decoder_output_size: 16
-    temporal_decoder_hidden_size: 32
+    hidden_size: 64
+    num_encoder_layers: 1
+    num_decoder_layers: 1
+    decoder_output_size: 8
+    temporal_decoder_hidden_size: 16
 
     # Feature projections (0 = no projection, will be tuned)
     past_feature_projection_size: 0
     future_forcing_projection_size: 0
 
     # Regularization
-    dropout: 0.1
-    use_layer_norm: true
+    dropout: 0.15
+    use_layer_norm: false
 
     # Learning rate
     learning_rate: 0.001

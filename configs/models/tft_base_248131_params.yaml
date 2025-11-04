@@ -76,7 +76,7 @@ model:
   type: tft
   overrides:
     # Base hyperparameters (will be tuned by tl-tune)
-    hidden_size: 64
+    hidden_size: 60
     lstm_layers: 1
     encoder_layers: 1
 
@@ -84,7 +84,7 @@ model:
     num_attention_heads: 4
 
     # Hidden continuous size
-    hidden_continuous_size: 64
+    hidden_continuous_size: 60
 
     # Regularization
     dropout: 0.1

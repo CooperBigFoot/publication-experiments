@@ -4,7 +4,11 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = ["polars>=1.34.0", "transfer-learning-publication"]
+dependencies = [
+    "find-similar-basins",
+    "polars>=1.34.0",
+    "transfer-learning-publication",
+]
 
 # [project.scripts]
 
@@ -66,3 +70,4 @@ addopts = [
 
 [tool.uv.sources]
 transfer-learning-publication = { git = "https://github.com/CooperBigFoot/transfer-learning-publication.git", rev = "main" }
+find-similar-basins = { path = "../find-similar-basins", editable = true }
