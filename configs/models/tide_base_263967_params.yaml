@@ -91,7 +91,7 @@ model:
     use_layer_norm: false
 
     # Learning rate
-    learning_rate: 0.001
+    learning_rate: 0.0001
 
     # Scheduler configuration
     scheduler: "cosine_annealing"

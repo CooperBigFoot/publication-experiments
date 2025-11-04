@@ -1,0 +1,15 @@
+# Tajikistan Benchmark Evaluation Configuration
+# Evaluation on 14 Tajikistan basins
+#
+# Note: Training configuration (features, sequences, pipeline) is automatically
+# loaded from the model config files referenced in the experiment YAML.
+
+data:
+  # Path to evaluation dataset (must contain /test subdirectory)
+  base_path: ../publication_data_transformed/central_asia
+
+  # Basin selection for evaluation
+  gauge_ids_file: configs/basin_ids_files/tajikistan_basins.txt
+
+  # Pipeline for inverse transform (uses same pipeline as training)
+  pipeline_path: ../publication_data_transformed/central_asia/ts_pipeline.joblib

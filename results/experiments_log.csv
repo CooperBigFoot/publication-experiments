@@ -1,0 +1,2 @@
+timestamp,experiment_name,mode,n_clusters,inertia,n_basins,input_file
+2025-11-04T10:35:32.635617,quality-basins-streamflow,optimize,4-20,N/A,1047,basin_selection/clustering/streamflow_52wk.npy
