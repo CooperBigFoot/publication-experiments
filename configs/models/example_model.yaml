@@ -42,7 +42,7 @@ features:
   target: streamflow
 sequence:
   input_length: 150
-  output_length: 1
+  output_length: 10
 data_preparation:
   mode: forecast
   is_autoregressive: true

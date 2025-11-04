@@ -2,9 +2,9 @@
 # Temporal Fusion Transformer for hydrological forecasting in forecast mode
 
 data:
-  base_path: ../path/to/your/data  # TODO: Update with your data path
-  gauge_ids_file: configs/basin_ids_files/your_basins.txt  # TODO: Update with your basin file
-  pipeline_path: ../path/to/your/data/ts_pipeline.joblib  # TODO: Update with your pipeline path
+  base_path: ../path/to/your/data # TODO: Update with your data path
+  gauge_ids_file: configs/basin_ids_files/your_basins.txt # TODO: Update with your basin file
+  pipeline_path: ../path/to/your/data/ts_pipeline.joblib # TODO: Update with your pipeline path
 
 features:
   forcing:
@@ -64,13 +64,13 @@ features:
   target: streamflow
 
 sequence:
-  input_length: 150  # TODO: Adjust based on your temporal resolution
-  output_length: 1   # TODO: Forecast horizon
+  input_length: 150 # TODO: Adjust based on your temporal resolution
+  output_length: 10 # TODO: Forecast horizon
 
 data_preparation:
-  mode: forecast  # Predicts future streamflow from past + future forcing
-  is_autoregressive: true  # Uses past streamflow as input
-  include_dates: true  # Include timestamps for evaluation
+  mode: forecast # Predicts future streamflow from past + future forcing
+  is_autoregressive: true # Uses past streamflow as input
+  include_dates: true # Include timestamps for evaluation
 
 model:
   type: tft
@@ -99,7 +99,7 @@ model:
     # Scheduler configuration
     scheduler: "cosine_annealing"
     scheduler_kwargs:
-      T_max: 150  # Should match trainer.max_epochs
+      T_max: 150 # Should match trainer.max_epochs
       eta_min: 0.00001
 
 dataloader:

@@ -81,7 +81,7 @@ features:
 ```yaml
 sequence:
   input_length: 150  # Adjust for your data (e.g., 365 for daily data)
-  output_length: 1   # Forecast horizon
+  output_length: 10   # Forecast horizon
 ```
 
 #### Scheduler T_max

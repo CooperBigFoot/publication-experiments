@@ -65,7 +65,7 @@ features:
 
 sequence:
   input_length: 150 # TODO: Adjust based on your temporal resolution (e.g., 365 for daily)
-  output_length: 1 # TODO: Forecast horizon
+  output_length: 10 # TODO: Forecast horizon
 
 data_preparation:
   mode: forecast # Predicts future streamflow from past + future forcing

@@ -35,7 +35,7 @@ IMPORTANT NOTES FOR LLMs:
 
    sequence:
      input_length: 365                     # Lookback window length
-     output_length: 1                      # Forecast horizon length
+     output_length: 10                      # Forecast horizon length
 
    data_preparation:
      mode: forecast                        # "forecast" or "simulation"
