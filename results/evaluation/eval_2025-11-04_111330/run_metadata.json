@@ -1,0 +1,39 @@
+{
+  "experiment_config": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "eval_config": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "models_requested": [
+    "ealstm",
+    "tide",
+    "tsmixer",
+    "tft"
+  ],
+  "seeds_requested": null,
+  "models_evaluated": [
+    "ealstm",
+    "tft",
+    "tide",
+    "tsmixer"
+  ],
+  "seeds_evaluated": {
+    "ealstm": [
+      42
+    ],
+    "tide": [
+      42
+    ],
+    "tsmixer": [
+      42
+    ],
+    "tft": [
+      42
+    ]
+  },
+  "checkpoint_source": "training",
+  "total_evaluations": 4,
+  "fresh_evaluations": 4,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-04T11:13:30.431636",
+  "completed_at": "2025-11-04T11:14:10.443574",
+  "cli_version": "1.0.0"
+}

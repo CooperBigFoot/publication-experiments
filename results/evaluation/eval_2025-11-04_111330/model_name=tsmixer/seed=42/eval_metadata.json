@@ -1,0 +1,13 @@
+{
+  "model_name": "tsmixer",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=tsmixer/run_2025-11-04_seed42/checkpoints/best_val_loss_0.0117.ckpt",
+  "checkpoint_val_loss": 0.0117,
+  "eval_config_path": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "data_config_hash": "98800b8cf58bb2d84e11e68b9caea92a06e0caefb6593005adafe330adb0b5f8",
+  "n_samples": 69418,
+  "n_basins": 49,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-04T11:14:00.878877"
+}
