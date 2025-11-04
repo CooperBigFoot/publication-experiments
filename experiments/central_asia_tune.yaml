@@ -1,0 +1,15 @@
+# Central Asia Hyperparameter Tuning Experiment
+# Tuning 4 architectures (EA-LSTM, TiDE, TSMixer, TFT) on all 63 Central Asia basins
+# Use with tl-tune to find optimal hyperparameters for each model
+
+models:
+  ealstm: configs/models/ealstm_central_asia_tune.yaml
+  tide: configs/models/tide_central_asia_tune.yaml
+  tsmixer: configs/models/tsmixer_central_asia_tune.yaml
+  tft: configs/models/tft_central_asia_tune.yaml
+
+trainer:
+  mode: evaluation # Always uses evaluation mode for tuning
+  max_epochs: 50 # Per trial (can override with --max-epochs)
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0
