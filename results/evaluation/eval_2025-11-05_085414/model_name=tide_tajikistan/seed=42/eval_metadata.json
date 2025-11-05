@@ -1,0 +1,13 @@
+{
+  "model_name": "tide_tajikistan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=tide_tajikistan/run_2025-11-05_seed42/checkpoints/best_val_loss_0.0152.ckpt",
+  "checkpoint_val_loss": 0.0152,
+  "eval_config_path": "configs/evaluation/tajikistan_benchmark.yaml",
+  "data_config_hash": "3ae72775a5fb8010b6af86ed26b544d96909e47c226dbc30acca6d27cec8dd86",
+  "n_samples": 18709,
+  "n_basins": 13,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-05T08:54:23.352434"
+}

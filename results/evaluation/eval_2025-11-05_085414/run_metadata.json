@@ -1,0 +1,39 @@
+{
+  "experiment_config": "configs/evaluation/tajikistan_benchmark.yaml",
+  "eval_config": "configs/evaluation/tajikistan_benchmark.yaml",
+  "models_requested": [
+    "ealstm_tajikistan",
+    "tide_tajikistan",
+    "tsmixer_tajikistan",
+    "tft_tajikistan"
+  ],
+  "seeds_requested": null,
+  "models_evaluated": [
+    "ealstm_tajikistan",
+    "tft_tajikistan",
+    "tide_tajikistan",
+    "tsmixer_tajikistan"
+  ],
+  "seeds_evaluated": {
+    "ealstm_tajikistan": [
+      42
+    ],
+    "tide_tajikistan": [
+      42
+    ],
+    "tsmixer_tajikistan": [
+      42
+    ],
+    "tft_tajikistan": [
+      42
+    ]
+  },
+  "checkpoint_source": "training",
+  "total_evaluations": 4,
+  "fresh_evaluations": 4,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-05T08:54:14.562921",
+  "completed_at": "2025-11-05T08:54:28.855090",
+  "cli_version": "1.0.0"
+}
