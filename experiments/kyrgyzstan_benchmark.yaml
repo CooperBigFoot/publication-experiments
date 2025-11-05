@@ -4,10 +4,10 @@
 # EA-LSTM: 30k, TSMixer: 162k, TFT: 282k, TiDE: 613k parameters
 
 models:
-  ealstm: configs/models/ealstm_30k_kyrgyzstan_benchmark.yaml
-  tide: configs/models/tide_613k_kyrgyzstan_benchmark.yaml
-  tsmixer: configs/models/tsmixer_162k_kyrgyzstan_benchmark.yaml
-  tft: configs/models/tft_282k_kyrgyzstan_benchmark.yaml
+  ealstm_kyrgyzstan: configs/models/ealstm_30k_kyrgyzstan_benchmark.yaml
+  tide_kyrgyzstan: configs/models/tide_613k_kyrgyzstan_benchmark.yaml
+  tsmixer_kyrgyzstan: configs/models/tsmixer_162k_kyrgyzstan_benchmark.yaml
+  tft_kyrgyzstan: configs/models/tft_282k_kyrgyzstan_benchmark.yaml
 
 trainer:
   mode: evaluation # 60/20/20 train/val/test split with early stopping
