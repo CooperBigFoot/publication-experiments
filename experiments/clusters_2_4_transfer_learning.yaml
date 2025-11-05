@@ -1,0 +1,17 @@
+# Clusters 2&4 Transfer Learning Experiment
+# Training 4 architectures (EA-LSTM, TiDE, TSMixer, TFT) on similar basins (clusters 2&4) from CARAVAN
+# Models will be trained from scratch and then finetuned on country-specific data
+# Model sizes: EA-LSTM: 30k, TSMixer: 162k, TFT: 282k, TiDE: 613k parameters
+# Hyperparameters tuned on Central Asia data (63 basins)
+
+models:
+  ealstm_clusters: configs/models/ealstm_30k_clusters_2_4.yaml
+  tide_clusters: configs/models/tide_613k_clusters_2_4.yaml
+  tsmixer_clusters: configs/models/tsmixer_162k_clusters_2_4.yaml
+  tft_clusters: configs/models/tft_282k_clusters_2_4.yaml
+
+trainer:
+  mode: evaluation # 60/20/20 train/val/test split with early stopping
+  max_epochs: 150
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0

@@ -1,0 +1,15 @@
+# Clusters 2&4 Transfer Learning Evaluation Configuration
+# Evaluation on similar basins (clusters 2&4) from CARAVAN dataset
+#
+# Note: Training configuration (features, sequences, pipeline) is automatically
+# loaded from the model config files referenced in the experiment YAML.
+
+data:
+  # Path to evaluation dataset (must contain /test subdirectory)
+  base_path: ../publication_data_transformed/caravan
+
+  # Basin selection for evaluation
+  gauge_ids_file: configs/basin_ids_files/clusters_2_4_basin_ids.txt
+
+  # Pipeline for inverse transform (uses same pipeline as training)
+  pipeline_path: ../publication_data_transformed/caravan/ts_pipeline.joblib

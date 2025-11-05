@@ -1,0 +1,101 @@
+# TSMixer 162K Clusters 2&4 Configuration
+# Tuned on Central Asia data (63 basins) on 2025-11-04
+# Best trial: 9 (val_loss: 0.009370)
+# Time Series Mixer for hydrological forecasting in forecast mode
+# Training on similar basins (clusters 2&4) from CARAVAN dataset for transfer learning
+
+data:
+  base_path: ../publication_data_transformed/caravan
+  gauge_ids_file: configs/basin_ids_files/clusters_2_4_basin_ids.txt
+  pipeline_path: ../publication_data_transformed/caravan/ts_pipeline.joblib
+
+features:
+  forcing:
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow_was_filled
+    - streamflow
+
+  static:
+    - p_mean
+    - area
+    - ele_mt_sav
+    - high_prec_dur
+    - frac_snow
+    - high_prec_freq
+    - slp_dg_sav
+    - cly_pc_sav
+    - aridity_ERA5_LAND
+    - aridity_FAO_PM
+    - low_prec_dur
+    - gauge_lat
+    - snd_pc_sav
+    - pet_mean_ERA5_LAND
+    - gauge_lon
+    - slt_pc_sav
+    - low_prec_freq
+    - glc_cl_smj
+    - seasonality_ERA5_LAND
+    - cmi_ix_syr
+    - rdd_mk_sav
+    - for_pc_sse
+
+  future:
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow_was_filled
+
+  target: streamflow
+
+sequence:
+  input_length: 150
+  output_length: 10
+
+data_preparation:
+  mode: forecast
+  is_autoregressive: true
+  include_dates: true
+
+model:
+  type: tsmixer
+  overrides:
+    # Architecture hyperparameters (from tuning)
+    hidden_size: 96
+    num_mixing_layers: 3
+    dropout: 0.03727532183988541
+    fusion_method: concat
+    static_embedding_size: 20
+
+    # Learning rate (from tuning)
+    learning_rate: 0.0009133995846860973
+
+    # Scheduler configuration
+    scheduler: "cosine_annealing"
+    scheduler_kwargs:
+      T_max: 150  # Should match trainer.max_epochs
+      eta_min: 0.00001
+
+dataloader:
+  batch_size: 2048
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: false
+  shuffle_train: true

@@ -1,0 +1,17 @@
+# Natural Basins Transfer Learning Experiment
+# Training 4 architectures (EA-LSTM, TiDE, TSMixer, TFT) on natural basins from CARAVAN
+# Models will be trained from scratch and then finetuned on country-specific data
+# Model sizes: EA-LSTM: 30k, TSMixer: 162k, TFT: 282k, TiDE: 613k parameters
+# Hyperparameters tuned on Central Asia data (63 basins)
+
+models:
+  ealstm_natural: configs/models/ealstm_30k_natural_basins.yaml
+  tide_natural: configs/models/tide_613k_natural_basins.yaml
+  tsmixer_natural: configs/models/tsmixer_162k_natural_basins.yaml
+  tft_natural: configs/models/tft_282k_natural_basins.yaml
+
+trainer:
+  mode: evaluation # 60/20/20 train/val/test split with early stopping
+  max_epochs: 150
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0

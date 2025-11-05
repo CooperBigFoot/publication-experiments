@@ -1,0 +1,17 @@
+# Kyrgyzstan Zero-Shot Transfer Evaluation Configuration
+# Evaluation of pretrained models (from natural basins or clusters 2&4) on Kyrgyzstan basins
+# This measures zero-shot transfer performance before finetuning
+#
+# Note: Training configuration (features, sequences) is automatically loaded from
+# the pretrained model checkpoints. The pipeline from the target domain is used
+# for inverse transform.
+
+data:
+  # Path to evaluation dataset (must contain /test subdirectory)
+  base_path: ../publication_data_transformed/central_asia
+
+  # Basin selection for evaluation (Kyrgyzstan basins)
+  gauge_ids_file: configs/basin_ids_files/kyrgyzstan_basins.txt
+
+  # Pipeline for inverse transform (uses Central Asia pipeline for target domain)
+  pipeline_path: ../publication_data_transformed/central_asia/ts_pipeline.joblib

@@ -1,0 +1,15 @@
+# Natural Basins Transfer Learning Evaluation Configuration
+# Evaluation on natural basins from CARAVAN dataset
+#
+# Note: Training configuration (features, sequences, pipeline) is automatically
+# loaded from the model config files referenced in the experiment YAML.
+
+data:
+  # Path to evaluation dataset (must contain /test subdirectory)
+  base_path: ../publication_data_transformed/caravan
+
+  # Basin selection for evaluation
+  gauge_ids_file: configs/basin_ids_files/natural_basins_filtered.txt
+
+  # Pipeline for inverse transform (uses same pipeline as training)
+  pipeline_path: ../publication_data_transformed/caravan/ts_pipeline.joblib
