@@ -1,0 +1,13 @@
+{
+  "model_name": "tft_natural",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=tft_natural/run_2025-11-05_seed42/checkpoints/best_val_loss_0.0666.ckpt",
+  "checkpoint_val_loss": 0.0666,
+  "eval_config_path": "configs/evaluation/natural_basins_transfer_learning.yaml",
+  "data_config_hash": "6d120868abe7f04edadae429b736ed9fbec8a03693bd8f5b815f3a9bf2ceb347",
+  "n_samples": 1310069,
+  "n_basins": 566,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-05T14:29:45.399123"
+}
