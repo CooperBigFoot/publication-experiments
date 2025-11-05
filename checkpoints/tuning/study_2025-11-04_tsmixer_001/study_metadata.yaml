@@ -1,0 +1,14 @@
+experiment_config: experiments/central_asia_tune.yaml
+search_space: configs/search_spaces/tsmixer_search.yaml
+metric: val_loss
+direction: minimize
+n_trials: 25
+completed_trials: 25
+best_trial_id: 9
+best_value: 0.009370217099785805
+timestamp_start: '2025-11-04T13:15:46.868034'
+timestamp_end: '2025-11-04T19:46:23.146629'
+max_epochs: 50
+sampler: TPESampler
+seed: 42
+auto_generated_config: configs/models/tsmixer_tuned_2025-11-04.yaml

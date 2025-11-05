@@ -1,0 +1,14 @@
+experiment_config: experiments/central_asia_tune.yaml
+search_space: configs/search_spaces/tft_search.yaml
+metric: val_loss
+direction: minimize
+n_trials: 25
+completed_trials: 25
+best_trial_id: 13
+best_value: 0.008559959940612316
+timestamp_start: '2025-11-04T13:21:31.850075'
+timestamp_end: '2025-11-04T19:36:39.753253'
+max_epochs: 50
+sampler: TPESampler
+seed: 42
+auto_generated_config: configs/models/tft_tuned_2025-11-04.yaml
