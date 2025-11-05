@@ -1,0 +1,13 @@
+{
+  "model_name": "ealstm",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=ealstm/run_2025-11-05_seed42/checkpoints/best_val_loss_0.0097.ckpt",
+  "checkpoint_val_loss": 0.0097,
+  "eval_config_path": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "data_config_hash": "f42a3ac4c5dc8c516d44f2a86e636e07622e99e43ae5e02ce7f076a20cad631e",
+  "n_samples": 69418,
+  "n_basins": 49,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-05T08:31:52.041526"
+}

@@ -1,0 +1,26 @@
+decoder_output_size: 56
+dropout: 0.39036512593949085
+future_forcing_projection_size: 64
+future_input_size: 12
+group_identifier: gauge_id
+hidden_size: 192
+input_len: 150
+input_size: 13
+learning_rate: 0.0003579463603829391
+loss_fn: mse
+loss_fn_kwargs: {}
+num_decoder_layers: 1
+num_encoder_layers: 2
+output_len: 10
+past_feature_projection_size: 16
+scheduler: cosine_annealing
+scheduler_factor: 0.5
+scheduler_kwargs:
+  T_max: 150
+  eta_min: 1.0e-05
+scheduler_patience: 5
+static_size: 22
+temporal_decoder_hidden_size: 96
+training_mode: evaluation
+use_layer_norm: false
+use_rev_in: true
