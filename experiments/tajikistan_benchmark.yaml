@@ -1,12 +1,13 @@
 # Tajikistan Benchmark Experiment
 # Training 4 architectures (EA-LSTM, TiDE, TSMixer, TFT) on 14 Tajikistan basins
-# All models use ~250k parameters, forecast mode, and basin_nse loss
+# Models tuned on Central Asia data (63 basins) with varying sizes
+# EA-LSTM: 30k, TSMixer: 162k, TFT: 282k, TiDE: 613k parameters
 
 models:
-  ealstm: configs/models/ealstm_tajikistan_benchmark.yaml
-  tide: configs/models/tide_tajikistan_benchmark.yaml
-  tsmixer: configs/models/tsmixer_tajikistan_benchmark.yaml
-  tft: configs/models/tft_tajikistan_benchmark.yaml
+  ealstm: configs/models/ealstm_30k_tajikistan_benchmark.yaml
+  tide: configs/models/tide_613k_tajikistan_benchmark.yaml
+  tsmixer: configs/models/tsmixer_162k_tajikistan_benchmark.yaml
+  tft: configs/models/tft_282k_tajikistan_benchmark.yaml
 
 trainer:
   mode: evaluation # 60/20/20 train/val/test split with early stopping

@@ -1,12 +1,13 @@
 # Kyrgyzstan Benchmark Experiment
 # Training 4 architectures (EA-LSTM, TiDE, TSMixer, TFT) on 49 Kyrgyzstan basins
-# All models use ~250k parameters, forecast mode, and basin_nse loss
+# Models tuned on Central Asia data (63 basins) with varying sizes
+# EA-LSTM: 30k, TSMixer: 162k, TFT: 282k, TiDE: 613k parameters
 
 models:
-  ealstm: configs/models/ealstm_kyrgyzstan_benchmark.yaml
-  tide: configs/models/tide_kyrgyzstan_benchmark.yaml
-  tsmixer: configs/models/tsmixer_kyrgyzstan_benchmark.yaml
-  tft: configs/models/tft_kyrgyzstan_benchmark.yaml
+  ealstm: configs/models/ealstm_30k_kyrgyzstan_benchmark.yaml
+  tide: configs/models/tide_613k_kyrgyzstan_benchmark.yaml
+  tsmixer: configs/models/tsmixer_162k_kyrgyzstan_benchmark.yaml
+  tft: configs/models/tft_282k_kyrgyzstan_benchmark.yaml
 
 trainer:
   mode: evaluation # 60/20/20 train/val/test split with early stopping
