@@ -1,0 +1,13 @@
+{
+  "model_name": "ealstm_clusters",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=ealstm_clusters/run_2025-11-05_seed42/checkpoints/best_val_loss_0.1340.ckpt",
+  "checkpoint_val_loss": 0.134,
+  "eval_config_path": "configs/evaluation/clusters_2_4_transfer_learning.yaml",
+  "data_config_hash": "08d30b955c75d6fdf320ce2a5d87cb6fae63059c7a9a08582b721a7496a43d12",
+  "n_samples": 881563,
+  "n_basins": 375,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-05T17:08:11.096221"
+}
