@@ -1,0 +1,13 @@
+{
+  "model_name": "tsmixer_natural_tajikistan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=tsmixer_natural_tajikistan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0142.ckpt",
+  "checkpoint_val_loss": 0.0142,
+  "eval_config_path": "configs/evaluation/tajikistan_benchmark.yaml",
+  "data_config_hash": "cd87ecde05c7241a74fb57ea4c98ce5e33adba54dcfa45e6ef20d182d3f605f3",
+  "n_samples": 18709,
+  "n_basins": 13,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:44:40.972935"
+}

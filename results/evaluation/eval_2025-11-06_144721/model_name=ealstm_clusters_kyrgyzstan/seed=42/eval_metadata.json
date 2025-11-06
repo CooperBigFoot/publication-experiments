@@ -1,0 +1,13 @@
+{
+  "model_name": "ealstm_clusters_kyrgyzstan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=ealstm_clusters_kyrgyzstan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0110.ckpt",
+  "checkpoint_val_loss": 0.011,
+  "eval_config_path": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "data_config_hash": "7228784988b18b6b5e5ddf92849466634f93a9603f9ad08b4513a7fb2c0bc9c9",
+  "n_samples": 69418,
+  "n_basins": 49,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:47:32.034243"
+}

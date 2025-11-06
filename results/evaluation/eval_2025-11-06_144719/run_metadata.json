@@ -1,0 +1,41 @@
+{
+  "experiment_config": "configs/evaluation/tajikistan_benchmark.yaml",
+  "eval_config": "configs/evaluation/tajikistan_benchmark.yaml",
+  "models_requested": [
+    "ealstm_clusters_tajikistan",
+    "tide_clusters_tajikistan",
+    "tsmixer_clusters_tajikistan",
+    "tft_clusters_tajikistan"
+  ],
+  "seeds_requested": [
+    42
+  ],
+  "models_evaluated": [
+    "ealstm_clusters_tajikistan",
+    "tft_clusters_tajikistan",
+    "tide_clusters_tajikistan",
+    "tsmixer_clusters_tajikistan"
+  ],
+  "seeds_evaluated": {
+    "ealstm_clusters_tajikistan": [
+      42
+    ],
+    "tide_clusters_tajikistan": [
+      42
+    ],
+    "tsmixer_clusters_tajikistan": [
+      42
+    ],
+    "tft_clusters_tajikistan": [
+      42
+    ]
+  },
+  "checkpoint_source": "finetuning",
+  "total_evaluations": 4,
+  "fresh_evaluations": 4,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-06T14:47:19.947152",
+  "completed_at": "2025-11-06T14:47:36.542079",
+  "cli_version": "1.0.0"
+}

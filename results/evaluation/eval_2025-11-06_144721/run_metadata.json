@@ -1,0 +1,41 @@
+{
+  "experiment_config": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "eval_config": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "models_requested": [
+    "ealstm_clusters_kyrgyzstan",
+    "tide_clusters_kyrgyzstan",
+    "tsmixer_clusters_kyrgyzstan",
+    "tft_clusters_kyrgyzstan"
+  ],
+  "seeds_requested": [
+    42
+  ],
+  "models_evaluated": [
+    "ealstm_clusters_kyrgyzstan",
+    "tft_clusters_kyrgyzstan",
+    "tide_clusters_kyrgyzstan",
+    "tsmixer_clusters_kyrgyzstan"
+  ],
+  "seeds_evaluated": {
+    "ealstm_clusters_kyrgyzstan": [
+      42
+    ],
+    "tide_clusters_kyrgyzstan": [
+      42
+    ],
+    "tsmixer_clusters_kyrgyzstan": [
+      42
+    ],
+    "tft_clusters_kyrgyzstan": [
+      42
+    ]
+  },
+  "checkpoint_source": "finetuning",
+  "total_evaluations": 4,
+  "fresh_evaluations": 4,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-06T14:47:21.432971",
+  "completed_at": "2025-11-06T14:47:54.885116",
+  "cli_version": "1.0.0"
+}

@@ -1,0 +1,13 @@
+{
+  "model_name": "tft_natural_tajikistan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=tft_natural_tajikistan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0122.ckpt",
+  "checkpoint_val_loss": 0.0122,
+  "eval_config_path": "configs/evaluation/tajikistan_benchmark.yaml",
+  "data_config_hash": "1ee497131745784bf960eb45ee2f81d739c9d9903a1363eb8e813a9e40a0a624",
+  "n_samples": 18709,
+  "n_basins": 13,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:44:44.347100"
+}

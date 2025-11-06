@@ -1,0 +1,13 @@
+{
+  "model_name": "ealstm_clusters_tajikistan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=ealstm_clusters_tajikistan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0175.ckpt",
+  "checkpoint_val_loss": 0.0175,
+  "eval_config_path": "configs/evaluation/tajikistan_benchmark.yaml",
+  "data_config_hash": "0f4cdbaee0edacacb2b28666eff10a7c8e2d56e982b6f09291c1cfd29d558285",
+  "n_samples": 18709,
+  "n_basins": 13,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:47:26.669832"
+}

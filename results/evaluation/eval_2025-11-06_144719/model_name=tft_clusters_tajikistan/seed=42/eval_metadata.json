@@ -1,0 +1,13 @@
+{
+  "model_name": "tft_clusters_tajikistan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=tft_clusters_tajikistan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0153.ckpt",
+  "checkpoint_val_loss": 0.0153,
+  "eval_config_path": "configs/evaluation/tajikistan_benchmark.yaml",
+  "data_config_hash": "55e51939bacbd214bde428ffbc1265b980e1e7fb2327bebdce17e662bdbc508d",
+  "n_samples": 18709,
+  "n_basins": 13,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:47:36.515696"
+}

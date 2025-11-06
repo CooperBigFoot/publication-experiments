@@ -1,0 +1,13 @@
+{
+  "model_name": "tide_natural_kyrgyzstan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=tide_natural_kyrgyzstan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0083.ckpt",
+  "checkpoint_val_loss": 0.0083,
+  "eval_config_path": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "data_config_hash": "628923583e3d74b9b0d13fd5b3e72022d3244d007670b2bf648a5051889af459",
+  "n_samples": 69418,
+  "n_basins": 49,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:44:44.119169"
+}

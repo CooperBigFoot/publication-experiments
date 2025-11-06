@@ -1,0 +1,13 @@
+{
+  "model_name": "ealstm_natural_tajikistan",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/finetuning/model_name=ealstm_natural_tajikistan/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0164.ckpt",
+  "checkpoint_val_loss": 0.0164,
+  "eval_config_path": "configs/evaluation/tajikistan_benchmark.yaml",
+  "data_config_hash": "6752f3d725a6da5353f04de38d805172eb680ceb2e48d5a6658e2552f66b41fe",
+  "n_samples": 18709,
+  "n_basins": 13,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T14:44:34.999314"
+}

@@ -1,0 +1,41 @@
+{
+  "experiment_config": "configs/evaluation/tajikistan_benchmark.yaml",
+  "eval_config": "configs/evaluation/tajikistan_benchmark.yaml",
+  "models_requested": [
+    "ealstm_natural_tajikistan",
+    "tide_natural_tajikistan",
+    "tsmixer_natural_tajikistan",
+    "tft_natural_tajikistan"
+  ],
+  "seeds_requested": [
+    42
+  ],
+  "models_evaluated": [
+    "ealstm_natural_tajikistan",
+    "tft_natural_tajikistan",
+    "tide_natural_tajikistan",
+    "tsmixer_natural_tajikistan"
+  ],
+  "seeds_evaluated": {
+    "ealstm_natural_tajikistan": [
+      42
+    ],
+    "tide_natural_tajikistan": [
+      42
+    ],
+    "tsmixer_natural_tajikistan": [
+      42
+    ],
+    "tft_natural_tajikistan": [
+      42
+    ]
+  },
+  "checkpoint_source": "finetuning",
+  "total_evaluations": 4,
+  "fresh_evaluations": 4,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-06T14:44:28.524237",
+  "completed_at": "2025-11-06T14:44:44.373791",
+  "cli_version": "1.0.0"
+}
