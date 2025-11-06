@@ -1,0 +1,13 @@
+{
+  "model_name": "tsmixer_clusters",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=tsmixer_clusters/run_2025-11-06_seed42/checkpoints/best_val_loss_0.1023.ckpt",
+  "checkpoint_val_loss": 0.1023,
+  "eval_config_path": "configs/evaluation/clusters_2_4_transfer_learning.yaml",
+  "data_config_hash": "9a81fb0bdc74bad3316299e6d8062056f4ad15115c80d56d1dda9c5ace91e1ea",
+  "n_samples": 881563,
+  "n_basins": 375,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T11:45:35.490457"
+}

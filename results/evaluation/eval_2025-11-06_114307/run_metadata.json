@@ -1,0 +1,29 @@
+{
+  "experiment_config": "configs/evaluation/clusters_2_4_transfer_learning.yaml",
+  "eval_config": "configs/evaluation/clusters_2_4_transfer_learning.yaml",
+  "models_requested": [
+    "tsmixer_clusters",
+    "tft_clusters"
+  ],
+  "seeds_requested": null,
+  "models_evaluated": [
+    "tft_clusters",
+    "tsmixer_clusters"
+  ],
+  "seeds_evaluated": {
+    "tsmixer_clusters": [
+      42
+    ],
+    "tft_clusters": [
+      42
+    ]
+  },
+  "checkpoint_source": "training",
+  "total_evaluations": 2,
+  "fresh_evaluations": 2,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-06T11:43:07.496587",
+  "completed_at": "2025-11-06T11:48:11.526087",
+  "cli_version": "1.0.0"
+}

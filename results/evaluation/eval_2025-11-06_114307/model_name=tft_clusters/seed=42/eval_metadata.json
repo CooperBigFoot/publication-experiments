@@ -1,0 +1,13 @@
+{
+  "model_name": "tft_clusters",
+  "seed": 42,
+  "checkpoint_path": "checkpoints/training/model_name=tft_clusters/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0888.ckpt",
+  "checkpoint_val_loss": 0.0888,
+  "eval_config_path": "configs/evaluation/clusters_2_4_transfer_learning.yaml",
+  "data_config_hash": "4b868b5a85cfbf65e2ddf2553ae3a757a02248c207a0ed775213e4b27bbe7e78",
+  "n_samples": 881563,
+  "n_basins": 375,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-06T11:48:10.696809"
+}
