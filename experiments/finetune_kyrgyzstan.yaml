@@ -1,0 +1,16 @@
+# Fine-tuning Natural Basins Models on Kyrgyzstan
+# Fine-tuning 4 architectures trained on CARAVAN natural basins
+# Target: 49 basins in Kyrgyzstan
+# Fine-tuning with 25x reduced learning rate (tl-finetune default)
+
+models:
+  ealstm_natural: configs/models/ealstm_30k_natural_finetune_kyrgyzstan.yaml
+  tide_natural: configs/models/tide_613k_natural_finetune_kyrgyzstan.yaml
+  tsmixer_natural: configs/models/tsmixer_162k_natural_finetune_kyrgyzstan.yaml
+  tft_natural: configs/models/tft_282k_natural_finetune_kyrgyzstan.yaml
+
+trainer:
+  mode: evaluation # 60/20/20 train/val/test split with early stopping
+  max_epochs: 150
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0
