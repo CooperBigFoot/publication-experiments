@@ -1,0 +1,12 @@
+base_checkpoint: checkpoints/training/model_name=tide_clusters/run_2025-11-05_seed42/checkpoints/best_val_loss_0.1093.ckpt
+base_val_loss: 0.1093
+source_model_name: tide_clusters
+target_model_name: tide_clusters_kyrgyzstan
+training_seed: 42
+finetuning_seed: 42
+pairing_mode: paired
+lr_reduction_factor: 25.0
+original_lr: 0.0003579463603829391
+finetuned_lr: 1.4317854415317564e-05
+timestamp: '2025-11-06T12:50:33.451123'
+experiment_config: configs/models/tide_613k_clusters_finetune_kyrgyzstan.yaml

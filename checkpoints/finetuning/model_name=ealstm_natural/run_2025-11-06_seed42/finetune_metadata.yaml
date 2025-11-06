@@ -1,0 +1,10 @@
+base_checkpoint: checkpoints/training/model_name=ealstm_natural/run_2025-11-05_seed42/checkpoints/best_val_loss_0.0994.ckpt
+base_val_loss: 0.0994
+training_seed: 42
+finetuning_seed: 42
+pairing_mode: paired
+lr_reduction_factor: 25.0
+original_lr: 0.0009331961068147915
+finetuned_lr: 3.732784427259166e-05
+timestamp: '2025-11-06T11:53:25.274378'
+experiment_config: configs/models/ealstm_30k_natural_finetune_tajikistan.yaml

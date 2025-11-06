@@ -1,0 +1,12 @@
+base_checkpoint: checkpoints/training/model_name=tide_natural/run_2025-11-05_seed42/checkpoints/best_val_loss_0.0803.ckpt
+base_val_loss: 0.0803
+source_model_name: tide_natural
+target_model_name: tide_natural_kyrgyzstan
+training_seed: 42
+finetuning_seed: 42
+pairing_mode: paired
+lr_reduction_factor: 25.0
+original_lr: 0.0003579463603829391
+finetuned_lr: 1.4317854415317564e-05
+timestamp: '2025-11-06T12:49:47.438282'
+experiment_config: configs/models/tide_613k_natural_finetune_kyrgyzstan.yaml
