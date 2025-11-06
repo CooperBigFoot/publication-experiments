@@ -4,10 +4,21 @@
 # Fine-tuning with 25x reduced learning rate (tl-finetune default)
 
 models:
-  ealstm_natural: configs/models/ealstm_30k_natural_finetune_kyrgyzstan.yaml
-  tide_natural: configs/models/tide_613k_natural_finetune_kyrgyzstan.yaml
-  tsmixer_natural: configs/models/tsmixer_162k_natural_finetune_kyrgyzstan.yaml
-  tft_natural: configs/models/tft_282k_natural_finetune_kyrgyzstan.yaml
+  ealstm_natural_kyrgyzstan:
+    config: configs/models/ealstm_30k_natural_finetune_kyrgyzstan.yaml
+    source_model: ealstm_natural
+
+  tide_natural_kyrgyzstan:
+    config: configs/models/tide_613k_natural_finetune_kyrgyzstan.yaml
+    source_model: tide_natural
+
+  tsmixer_natural_kyrgyzstan:
+    config: configs/models/tsmixer_162k_natural_finetune_kyrgyzstan.yaml
+    source_model: tsmixer_natural
+
+  tft_natural_kyrgyzstan:
+    config: configs/models/tft_282k_natural_finetune_kyrgyzstan.yaml
+    source_model: tft_natural
 
 trainer:
   mode: evaluation # 60/20/20 train/val/test split with early stopping
