@@ -1,0 +1,12 @@
+base_checkpoint: checkpoints/training/model_name=tft_clusters/run_2025-11-06_seed42/checkpoints/best_val_loss_0.0888.ckpt
+base_val_loss: 0.0888
+source_model_name: tft_clusters
+target_model_name: tft_clusters_tajikistan
+training_seed: 42
+finetuning_seed: 42
+pairing_mode: paired
+lr_reduction_factor: 25.0
+original_lr: 0.000992851991629171
+finetuned_lr: 3.9714079665166844e-05
+timestamp: '2025-11-06T14:18:13.781331'
+experiment_config: configs/models/tft_282k_clusters_finetune_tajikistan.yaml

@@ -1,0 +1,25 @@
+bias: true
+bidirectional: false
+bidirectional_fusion: concat
+dropout: 0.49785947308112677
+future_hidden_size: 96
+future_input_size: 12
+future_layers: 1
+group_identifier: gauge_id
+hidden_size: 192
+input_len: 150
+input_size: 13
+learning_rate: 0.0009331961068147915
+loss_fn: mse
+loss_fn_kwargs: {}
+num_layers: 1
+output_len: 10
+scheduler: cosine_annealing
+scheduler_factor: 0.5
+scheduler_kwargs:
+  T_max: 150
+  eta_min: 1.0e-05
+scheduler_patience: 5
+static_size: 22
+training_mode: evaluation
+use_rev_in: true

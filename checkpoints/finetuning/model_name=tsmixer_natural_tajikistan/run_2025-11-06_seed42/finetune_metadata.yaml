@@ -1,0 +1,12 @@
+base_checkpoint: checkpoints/training/model_name=tsmixer_natural/run_2025-11-05_seed42/checkpoints/best_val_loss_0.0759.ckpt
+base_val_loss: 0.0759
+source_model_name: tsmixer_natural
+target_model_name: tsmixer_natural_tajikistan
+training_seed: 42
+finetuning_seed: 42
+pairing_mode: paired
+lr_reduction_factor: 25.0
+original_lr: 0.0009133995846860973
+finetuned_lr: 3.653598338744389e-05
+timestamp: '2025-11-06T14:16:54.390976'
+experiment_config: configs/models/tsmixer_162k_natural_finetune_tajikistan.yaml
