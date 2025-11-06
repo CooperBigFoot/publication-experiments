@@ -1,0 +1,16 @@
+# Fine-tuning Clusters 2&4 Models on Tajikistan
+# Fine-tuning 4 architectures trained on CARAVAN clusters 2&4
+# Target: 13 basins in Tajikistan
+# Fine-tuning with 25x reduced learning rate (tl-finetune default)
+
+models:
+  ealstm_clusters_tajikistan: configs/models/ealstm_30k_clusters_finetune_tajikistan.yaml
+  tide_clusters_tajikistan: configs/models/tide_613k_clusters_finetune_tajikistan.yaml
+  tsmixer_clusters_tajikistan: configs/models/tsmixer_162k_clusters_finetune_tajikistan.yaml
+  tft_clusters_tajikistan: configs/models/tft_282k_clusters_finetune_tajikistan.yaml
+
+trainer:
+  mode: evaluation # 60/20/20 train/val/test split with early stopping
+  max_epochs: 150
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0

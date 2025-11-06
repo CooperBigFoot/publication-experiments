@@ -1,0 +1,104 @@
+# TiDE 613K Fine-tuning on Kyrgyzstan
+# Fine-tuning clusters 2&4 model on Kyrgyzstan data
+# Base model trained on CARAVAN clusters 2&4
+# Fine-tuning on 49 basins in Kyrgyzstan
+
+data:
+  base_path: ../publication_data_transformed/central_asia
+  gauge_ids_file: configs/basin_ids_files/kyrgyzstan_basins.txt
+  pipeline_path: ../publication_data_transformed/central_asia/ts_pipeline.joblib
+
+features:
+  forcing:
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow_was_filled
+    - streamflow
+
+  static:
+    - p_mean
+    - area
+    - ele_mt_sav
+    - high_prec_dur
+    - frac_snow
+    - high_prec_freq
+    - slp_dg_sav
+    - cly_pc_sav
+    - aridity_ERA5_LAND
+    - aridity_FAO_PM
+    - low_prec_dur
+    - gauge_lat
+    - snd_pc_sav
+    - pet_mean_ERA5_LAND
+    - gauge_lon
+    - slt_pc_sav
+    - low_prec_freq
+    - glc_cl_smj
+    - seasonality_ERA5_LAND
+    - cmi_ix_syr
+    - rdd_mk_sav
+    - for_pc_sse
+
+  future:
+    - temperature_2m_max
+    - temperature_2m_min
+    - potential_evaporation_sum_FAO_PENMAN_MONTEITH
+    - potential_evaporation_sum_ERA5_LAND
+    - temperature_2m_mean
+    - total_precipitation_sum
+    - snow_depth_water_equivalent_mean
+    - surface_net_solar_radiation_mean
+    - surface_net_thermal_radiation_mean
+    - sin_day_of_year
+    - cos_day_of_year
+    - streamflow_was_filled
+
+  target: streamflow
+
+sequence:
+  input_length: 150
+  output_length: 10
+
+data_preparation:
+  mode: forecast
+  is_autoregressive: true
+  include_dates: true
+
+model:
+  type: tide
+  overrides:
+    # Architecture hyperparameters (from tuning)
+    hidden_size: 192
+    num_encoder_layers: 2
+    num_decoder_layers: 1
+    decoder_output_size: 56
+    temporal_decoder_hidden_size: 96
+    past_feature_projection_size: 16
+    future_forcing_projection_size: 64
+    dropout: 0.39036512593949085
+    use_layer_norm: false
+
+    # Learning rate (from tuning)
+    learning_rate: 0.0003579463603829391
+
+    # Scheduler configuration
+    scheduler: "cosine_annealing"
+    scheduler_kwargs:
+      T_max: 150  # Should match trainer.max_epochs
+      eta_min: 0.00001
+
+dataloader:
+  batch_size: 2048
+  num_workers: 8
+  pin_memory: true
+  persistent_workers: false
+  shuffle_train: true
