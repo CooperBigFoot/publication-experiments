@@ -4,10 +4,10 @@
 # Fine-tuning with 25x reduced learning rate (tl-finetune default)
 
 models:
-  ealstm_clusters_kyrgyzstan: configs/models/ealstm_30k_clusters_finetune_kyrgyzstan.yaml
-  tide_clusters_kyrgyzstan: configs/models/tide_613k_clusters_finetune_kyrgyzstan.yaml
-  tsmixer_clusters_kyrgyzstan: configs/models/tsmixer_162k_clusters_finetune_kyrgyzstan.yaml
-  tft_clusters_kyrgyzstan: configs/models/tft_282k_clusters_finetune_kyrgyzstan.yaml
+  ealstm_clusters: configs/models/ealstm_30k_clusters_finetune_kyrgyzstan.yaml
+  tide_clusters: configs/models/tide_613k_clusters_finetune_kyrgyzstan.yaml
+  tsmixer_clusters: configs/models/tsmixer_162k_clusters_finetune_kyrgyzstan.yaml
+  tft_clusters: configs/models/tft_282k_clusters_finetune_kyrgyzstan.yaml
 
 trainer:
   mode: evaluation # 60/20/20 train/val/test split with early stopping
