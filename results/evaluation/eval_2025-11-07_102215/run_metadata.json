@@ -1,0 +1,44 @@
+{
+  "experiment_config": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "eval_config": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "models_requested": [
+    "tft_kyrgyzstan"
+  ],
+  "seeds_requested": [
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59
+  ],
+  "models_evaluated": [
+    "tft_kyrgyzstan"
+  ],
+  "seeds_evaluated": {
+    "tft_kyrgyzstan": [
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59
+    ]
+  },
+  "checkpoint_source": "training",
+  "total_evaluations": 10,
+  "fresh_evaluations": 10,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-07T10:22:15.452773",
+  "completed_at": "2025-11-07T10:23:48.025361",
+  "cli_version": "1.0.0"
+}

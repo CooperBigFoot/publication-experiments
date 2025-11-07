@@ -1,0 +1,13 @@
+{
+  "model_name": "tft_kyrgyzstan",
+  "seed": 59,
+  "checkpoint_path": "checkpoints/training/model_name=tft_kyrgyzstan/run_2025-11-07_seed59/checkpoints/best_val_loss_0.0080.ckpt",
+  "checkpoint_val_loss": 0.008,
+  "eval_config_path": "configs/evaluation/kyrgyzstan_benchmark.yaml",
+  "data_config_hash": "fe7c2abb882cdc3efda520c526499d96dee40cb1d60a2321db5261c598a2a676",
+  "n_samples": 69418,
+  "n_basins": 49,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-07T10:23:47.970730"
+}
