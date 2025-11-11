@@ -1,0 +1,13 @@
+# Swiss (CAMELS_CH) Benchmark Experiment
+# Training TFT (282k parameters) on all Swiss basins
+# Model tuned on Central Asia data (63 basins) on 2025-11-04
+# Testing transfer learning performance on Swiss catchments
+
+models:
+  tft_swiss: configs/models/tft_282k_swiss.yaml
+
+trainer:
+  mode: evaluation # 60/20/20 train/val/test split with early stopping
+  max_epochs: 150
+  check_val_every_n_epoch: 1
+  gradient_clip_val: 1.0

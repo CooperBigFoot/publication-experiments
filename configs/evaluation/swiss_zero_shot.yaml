@@ -1,0 +1,16 @@
+# Swiss (CAMELS_CH) Zero-Shot Transfer Evaluation Configuration
+# Evaluation of TFT model trained on Swiss data
+# Tests model performance on held-out Swiss basins (test split)
+#
+# Note: Training configuration (features, sequences) is automatically loaded from
+# the model checkpoint. The pipeline from the Swiss data is used for inverse transform.
+
+data:
+  # Path to evaluation dataset (must contain /test subdirectory)
+  base_path: ../CAMELS_CH_TRANSFORMED
+
+  # Basin selection for evaluation (all Swiss basins)
+  region: camelsch
+
+  # Pipeline for inverse transform (uses Swiss pipeline)
+  pipeline_path: ../CAMELS_CH_TRANSFORMED/ts_pipeline.joblib
