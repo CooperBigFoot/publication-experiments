@@ -1,0 +1,28 @@
+{
+  "experiment_config": "configs/evaluation/swiss_zero_shot.yaml",
+  "eval_config": "configs/evaluation/swiss_zero_shot.yaml",
+  "models_requested": [
+    "tft_swiss"
+  ],
+  "seeds_requested": null,
+  "models_evaluated": [
+    "tft_swiss"
+  ],
+  "seeds_evaluated": {
+    "tft_swiss": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ]
+  },
+  "checkpoint_source": "training",
+  "total_evaluations": 5,
+  "fresh_evaluations": 5,
+  "cached_evaluations": 0,
+  "skipped_evaluations": 0,
+  "started_at": "2025-11-11T20:35:13.927342",
+  "completed_at": "2025-11-11T20:43:31.744989",
+  "cli_version": "1.0.0"
+}

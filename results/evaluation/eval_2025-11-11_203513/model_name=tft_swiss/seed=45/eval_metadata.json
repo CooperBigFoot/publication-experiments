@@ -1,0 +1,13 @@
+{
+  "model_name": "tft_swiss",
+  "seed": 45,
+  "checkpoint_path": "checkpoints/training/model_name=tft_swiss/run_2025-11-11_seed45/checkpoints/best_val_loss_0.0938.ckpt",
+  "checkpoint_val_loss": 0.0938,
+  "eval_config_path": "configs/evaluation/swiss_zero_shot.yaml",
+  "data_config_hash": "6b4b3323bc430d24b9006e89f078462568c0a913b1d94b272173c447006934c3",
+  "n_samples": 660788,
+  "n_basins": 285,
+  "output_length": 10,
+  "inverse_transform_applied": true,
+  "evaluated_at": "2025-11-11T20:41:46.599111"
+}
